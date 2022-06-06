@@ -11,7 +11,7 @@ let timeout = 0;
 
 function handleGuess(guess) {
     // *** Implement Missing Functionality ***
- 
+    
     // Generate a random spot based on spots array
     spot = getRandomItem(spots);
 
