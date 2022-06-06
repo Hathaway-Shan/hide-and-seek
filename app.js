@@ -8,21 +8,29 @@ let wins = 0;
 let spot = '';
 let guessed = '';
 let timeout = 0;
+let losses = 0;
 
 function handleGuess(guess) {
     // *** Implement Missing Functionality ***
-    
+    guessed = true;
     // Generate a random spot based on spots array
     spot = getRandomItem(spots);
 
     // Use the score function to get a result for guess and actual spot
-    if (result === 1)
+    
+    
     // (You also need to implement the score function)
     // If the result is 1 (win), increase wins state
-    
+    let currentOutcome = score(guess, spot);
+    if (currentOutcome === 1) {
+        wins++;
+    } else {
+        losses++;
+    }
     // Increase total state 
     // ***
-
+    total++;
+    console.log(wins, losses, total);
     // Store the guess so we can apply special background
     guessed = guess;
     // Clear the timeout, in case user is clicking again before
