@@ -16,7 +16,7 @@ function handleGuess(guess) {
     spot = getRandomItem(spots);
 
     // Use the score function to get a result for guess and actual spot
-
+    if (result === 1)
     // (You also need to implement the score function)
     // If the result is 1 (win), increase wins state
     
@@ -49,6 +49,16 @@ function resetClasses() {
 function displayHidingSpots() {
     // clear existing classes
     resetClasses();
+
+    if (guessed === 'tree') {
+        treeButton.classList.add('guessed');
+    }
+    if (guessed === 'boulder') {
+        boulderButton.classList.add('guessed');
+    }
+    if (guessed === 'shed') {
+        shedButton.classList.add('guessed')
+    }
 
     // add face class
     if (spot === 'tree') {
