@@ -17,8 +17,6 @@ function handleGuess(guess) {
     spot = getRandomItem(spots);
 
     // Use the score function to get a result for guess and actual spot
-    
-    
     // (You also need to implement the score function)
     // If the result is 1 (win), increase wins state
     let currentOutcome = score(guess, spot);
@@ -27,12 +25,14 @@ function handleGuess(guess) {
     } else {
         losses++;
     }
+
     // Increase total state 
     // ***
     total++;
     
     // Store the guess so we can apply special background
     guessed = guess;
+    
     // Clear the timeout, in case user is clicking again before
     // 2 seconds
     clearTimeout(timeout);
