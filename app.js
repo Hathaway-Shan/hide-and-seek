@@ -30,7 +30,7 @@ function handleGuess(guess) {
     // Increase total state 
     // ***
     total++;
-    console.log(wins, losses, total);
+    
     // Store the guess so we can apply special background
     guessed = guess;
     // Clear the timeout, in case user is clicking again before
@@ -65,7 +65,7 @@ function displayHidingSpots() {
         boulderButton.classList.add('guessed');
     }
     if (guessed === 'shed') {
-        shedButton.classList.add('guessed')
+        shedButton.classList.add('guessed');
     }
 
     // add face class
@@ -114,7 +114,12 @@ shedButton.addEventListener('click', () => {
 //    (derive losses from totals and wins)
 // ***
 function displayResults() {
-
+    const winsDisplay = document.getElementById('wins-display');
+    winsDisplay.textContent = wins;
+    const lossesDisplay = document.getElementById('losses-display');
+    lossesDisplay.textContent = losses;
+    const totalDisplay = document.getElementById('total-display');
+    totalDisplay.textContent = total;
 }
 
 
